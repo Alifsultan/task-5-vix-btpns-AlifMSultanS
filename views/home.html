@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Page</title>
+
+      <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+</head>
+<body>
+	<nav>
+		<div class="nav-wrapper">
+			
+		  <a href="#" class="brand-logo">Go</a>
+		  <ul id="nav-mobile" class="right hide-on-med-and-down">
+			<li>Halo selamat datang {{ .username }}</li>
+			<li><a href='/logout'>Logout</a></li>
+		  </ul>
+		</div>
+	  </nav>
+	<!-- <h3>{{ .message }}</h3s> -->
+		<h1>Silahkan Pilih Gambar</h1>
+
+    <!-- <form action="/upload" method="post" enctype="multipart/form-data">
+        Gambar: <input type="file" name="file"><br><br>
+        <input type="submit" value="Submit">
+    </form>  -->
+	<form method="POST" action="/upload" enctype="multipart/form-data">
+		Gambar: <input type="file" name="file"><br><br>
+        <input type="submit">
+    </form>
+
+    <a href="/image"><img src="/thumbnail"></a>
+</body>
+</html>
